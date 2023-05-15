@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+}
+.container h1{
+  text-align: center;
+  color:white;
+}
+.calimc h1
+{
+  color: black;
+}
+
+.calimc h2
+{
+  color: black;
+}
+.container .text-center h3
+{
+  color: #fff; 
+  margin-top: 1%; 
+  margin-bottom: 5%;
+}
+.container2 h2
+{
+  color:white;
+}
+.container2 {
+  background: linear-gradient(rgb(47, 50, 96), #304c83);
+  display: inline-flex;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  flex-direction: column;
+  align-items: center;
+  width: 20em;
+  margin-left: 30%;
+  font-family: 'Quicksand';
+  margin-bottom: 18vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container2 #btn_calcular
+{
+  background-color: #587084;
+  width: 50%;
+}
+.container2 #resultado
+{
+  resize: none;
+  text-align: center;
+}
+.container2 h2 {
+  text-align: center;
+}
+
+.container2 input {
+  border-color: white;
+}
+
+.textoimc1 {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.textoimc2 {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+.Plan {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 10%;
+  color: #ffff;
+}
+
+h3 {
+  font-size: 44px;
+
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.gym-name {
+  font-size: 32px;
+  color: black;
+}
+
+header {
+  width: 100%;
+  height: 80vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .container {
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .container .menu {
+  display: flex;
+  align-items: center;
+}
+
+header .container .menu .item a {
+  color: white;
+  transition: 0.7s;
+}
+
+header .container .menu .item a:hover {
+  opacity: 0.7;
+}
+
+header .container .menu .item+.item {
+  margin-left: 50px;
+}
+
+@media (max-width: 1199px) {
+  header .container .menu {
+    position: fixed;
+    left: -2000px;
+    transition: 0.7s;
+  }
+
+  header .container .menu.active {
+    left: 0;
+    top: 0;
+    padding: 55px;
+    padding-bottom: 80px;
+    background-color: #1B2436;
+    flex-direction: column;
+    z-index: 997;
+    width: 35%;
+    height: 100%;
+  }
+
+  header .container .menu.active .item {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  header .container .menu.active .item+.item {
+    margin-top: 20px;
+  }
+}
+
+header .container .menu-toggle {
+  cursor: pointer;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+
+@media (min-width: 1200px) {
+  header .container .menu-toggle {
+    display: none;
+  }
+}
+
+header .container .menu-toggle::before {
+  content: "";
+  position: relative;
+  top: 0px;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+header .container .menu-toggle div {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+}
+
+header .container .menu-toggle::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+header .container .menu-toggle.active {
+  position: fixed;
+  right: 25px;
+}
+
+header .container .menu-toggle.active div {
+  visibility: hidden;
+}
+
+header .container .menu-toggle.active::before {
+  transform: rotate(50deg) translateY(10px);
+}
+
+header .container .menu-toggle.active::after {
+  transform: rotate(-50deg) translateY(-10px);
+}
+
+.sobre {
+  width: 100%;
+  background-color: #1B2436;
+}
+
+.sobre .container .about-us {
+  padding-top: 63px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1199px) {
+  .sobre .container .about-us {
+    flex-direction: column;
+    justify-content: initial;
+  }
+}
+
+.sobre .container .about-us article {
+  width: 50%;
+}
+
+@media (max-width: 1199px) {
+  .sobre .container .about-us article {
+    width: 100%;
+  }
+}
+
+.sobre .container .about-us article h3 {
+  color: white;
+}
+
+.sobre .container .about-us article .text {
+  font-size: 24px;
+  margin-top: 48px;
+  color: white;
+}
+
+.sobre .container .about-us .banner {
+  width: 50%;
+  padding-left: 50px;
+}
+
+@media (max-width: 1199px) {
+  .sobre .container .about-us .banner {
+    margin-top: 40px;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+.calimc {
+  text-align: center;
+  align-items: center;
+  background-color: #ffff;
+  height: 54vh;
+}
+
+.calimc h1 {
+  margin-top: 110px;
+}
+
+.input-group {
+  width: 50%;
+}
